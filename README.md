@@ -1,4 +1,4 @@
-# Section one bacsic flutter app, " My First App "
+# Section one Basic Flutter, " My First App "
 
 Flutter Basics
 
