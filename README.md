@@ -6,7 +6,7 @@ but it is a very useful exercise and has a lot of parts to it that are used in e
 
 ## Here is what it looks like
 
-<img src="http://briangurtz.com/wp-admin/upload.php?item=434"
+<img src="http://briangurtz.com/wp-content/uploads/2019/11/hello_worl_appbar.gif"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
 
