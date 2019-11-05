@@ -1,4 +1,5 @@
-# Your first 'Hello World' App with AppBar.
+## Your first App
+# 'Hello World' App with AppBar.
 
 ## Flutter Basics part 1
 
