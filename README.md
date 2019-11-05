@@ -1,16 +1,19 @@
-# Section one Basic Flutter, " My First App "
+# A Basic Flutter App - Your first 'Hello World' App. 
 
-Flutter Basics
+A fun app to make, not really sure if I would load it on to the Google or Apple Store,
+but it is a very useful exercise and has a lot of parts to it that are used in everyday app's.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Here is what it looks like
 
-A few resources to get you started if this is your first Flutter project:
+<img src="http://briangurtz.com/wp-admin/upload.php?item=434"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Getting Started
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project has some really cool feature's 
+
+#### A few things that are covered in this Flutter project:
+
+- 
