@@ -1,4 +1,6 @@
-# A Basic Flutter App - Your first 'Hello World' App. 
+# Flutter Form App with Validation
+
+## Flutter Basics Part 2 -  
 
 A fun app to make, not really sure if I would load it on to the Google or Apple Store,
 but it is a very useful exercise and has a lot of parts to it that are used in everyday app's.
