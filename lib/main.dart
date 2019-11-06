@@ -1,198 +1,66 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
-import 'package:validators/validators.dart' as validator;
-import 'result.dart';
-import 'model.dart';
- 
-void main() => runApp(new MyApp());
- 
-class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+
+void main() => runApp(TabsApp());
+
+class TabsApp extends StatelessWidget {
+  const TabsApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Flutter Form Valiidation"),
-        ),
-        body: TestForm(),
-      ),
-    );
-  }
-}
-
-class TestForm extends StatefulWidget {
-  @override
-  _TestFormState createState () => _TestFormState();
-
-}
-class _TestFormState extends State<TestForm> {
-  final _formKey = GlobalKey<FormState>();
-  Model model = Model();
-  @override
-  
-  Widget build(BuildContext context) {
-    final halfMediaWidth = MediaQuery.of(context).size.width / 2.0;
-      
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: <Widget>[
-          
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      home: DefaultTabController(
+        length: 4, 
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("Tabs Example"),
+            bottom: TabBar(
+              tabs: <Widget>[
+                Tab (child: Icon(Icons.home)),
+                Tab (child: Icon(Icons.photo)),
+                Tab (child: Icon(Icons.account_circle)),
+                Tab (child: Text("Finish")),
+              ],
+            ),
+          ),
+          body: TabBarView(
             children: <Widget>[
+              Center(
+                child: Text("A for Apple"),
+              ),
+              Center(
+                child: Text("B for Book"),
+              ),
+              Center(
+                child: Text("C for Count"),
+              ),
+              // Center(
+              //   child: Text("Finished"),
+              // ),
 
-
-              Container(
-            alignment: Alignment.topCenter,
-            width: halfMediaWidth,
-            child: MyTextFormField(
-              hintText: "First Name",
-              validator: (String value) {
-                if (value.isEmpty) {
-                  return 'Enter your first name';
-                }
-                return null;
-              },
-              onSaved: (String value) {
-                model.firstName = value;
-              },
-            ),
-          ),
-
-          Container(
-            alignment: Alignment.topCenter,
-            width: halfMediaWidth,
-            child: MyTextFormField(
-              hintText: "Last Name",
-              validator: (String value) {
-                if (value.isEmpty) {
-                  return 'Enter your last name';
-                }
-                return null;
-              },
-              onSaved: (String value) {
-                model.lastName = value;
-              },
-            ),
-          ),
-
+              FinishedView(),
 
             ],
           ),
-
-          MyTextFormField(
-              hintText: "Email",
-              isEmail: true,
-            validator: (String value) {
-              if (!validator.isEmail(value)) {
-                return 'Please enter a valid email';
-              }
-              return null;
-            },
-            onSaved: (String value) {
-              model.email = value;
-            },
-            ),
-
-            MyTextFormField(
-              hintText: "Password",
-              isPassword: true,
-              validator: (String value) {
-                if (value.length < 7) {
-                  return 'Password should be a minimum of 7 characters';
-                }
-                _formKey.currentState.save();
-                return null;
-              },
-              onSaved: (String value) {
-                model.password = value;
-              },
-            ),
-
-            MyTextFormField(
-              hintText: "Confirm Password",
-              isPassword: true,
-              validator: (String value) {
-                if (value.length < 7) {
-                  return 'Password should be a minimum of 7 characters';
-                } else if (model.password != null && value != model.password) {
-                  return "Passwords do not match";
-                }
-                return null;
-              },
-            ),
-
-            RaisedButton(
-              color: Colors.greenAccent[700],
-              child: Text(
-                "Sign Up",
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
-                onPressed: () {
-                print("SignUp");
-                  if (_formKey.currentState.validate()) {
-                    _formKey.currentState.save();
-
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Result(
-                              model: this.model,)));
-
-                  }
-                },
-            ),
-
-        ],
+        ),
       ),
     );
   }
 }
 
-class MyTextFormField extends StatelessWidget {
-  final String hintText;
-  final Function validator;
-  final Function onSaved;
-  final bool isPassword;
-  final bool isEmail;
-
-  MyTextFormField({
-    this.hintText,
-    this.validator,
-    this.onSaved,
-    this.isPassword = false,
-    this.isEmail = false,
-  });
+class FinishedView extends StatelessWidget {
+  const FinishedView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    
-    return Padding(
-      padding: EdgeInsets.all(8.0),
-      child: TextFormField(
-        decoration: InputDecoration(
-          hintText: hintText,
-          contentPadding: EdgeInsets.all(15.0),
-          border: InputBorder.none,
-
-          // border: OutlineInputBorder(
-          //   borderSide: BorderSide(
-          //     color: Colors.red
-          //   ),
-          // ),
-          
-          filled: true,
-          fillColor:  Colors.grey[200],
+    return Container(
+      child: Center(
+        child: Text("Hello World", 
+        style: TextStyle(
+          fontFamily: 'Pacifico',
+          fontSize: 30.0,
+          color: Colors.redAccent,
+          ),
         ),
-        obscureText: isPassword ? true : false,
-        validator: validator,
-        onSaved: onSaved,
-        keyboardType: isEmail ? TextInputType.emailAddress : TextInputType.text,
       ),
     );
   }
