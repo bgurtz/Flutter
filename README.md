@@ -5,7 +5,7 @@
 ### Section's Covered so far.
 
 - Part 1 
-  - My First App
+  - My First App ' Hello World ' with AppBar and Custom Fonts and Image Assets
 - Part 2 
   - Forms with Validation
 - Part 3
