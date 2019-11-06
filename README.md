@@ -4,7 +4,7 @@
 
 ### Section's Covered so far.
 
-#### Each section has a animated gif to show what you will build. 
+#### Each section has an animated gif to show what you will build. 
 
 - Part 1 
   - My First App ' Hello World ' with AppBar and Custom Fonts and Image Assets
