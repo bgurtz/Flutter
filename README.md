@@ -12,3 +12,5 @@
   - Forms with Validation
 - Part 3
   - Basic Navigation using Tabs
+- Part 4
+  - Basic Layouts and GridView with Tab Navigation
