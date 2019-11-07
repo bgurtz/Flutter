@@ -1,4 +1,4 @@
-# Basic Layouts and GridView & Tab Navigation
+# Basic Layouts and GridView with Tab Navigation
 
 ## Flutter Basics Part 4  
 
