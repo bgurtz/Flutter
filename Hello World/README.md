@@ -1,6 +1,6 @@
 # flutter_basics
 
-A new Flutter project.
+Hello World
 
 ## Getting Started
 

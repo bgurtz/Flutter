@@ -1,6 +1,6 @@
 # flutter_basics
 
-A new Flutter project.
+Basic Navigation using Tabs
 
 ## Getting Started
 

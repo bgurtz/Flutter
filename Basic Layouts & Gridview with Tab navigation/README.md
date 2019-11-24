@@ -1,6 +1,6 @@
 # flutter_basics
 
-A new Flutter project.
+Basic Layouts & Gridview with Tab navigation
 
 ## Getting Started
 
