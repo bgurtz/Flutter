@@ -1,16 +1,16 @@
-# flutter_basics
+# Flutter Basic's
 
-A new Flutter project.
+## Look through the ' Branches ' at the top to see the diffrent sections.
 
-## Getting Started
+### Section's Covered so far.
 
-This project is a starting point for a Flutter application.
+#### Each section has an animated gif to show what you will build. 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Part 1 
+  - My First App ' Hello World ' with AppBar and Custom Fonts and Image Assets
+- Part 2 
+  - Forms with Validation
+- Part 3
+  - Basic Navigation using Tabs
+- Part 4
+  - Basic Layouts and GridView with Tab Navigation
